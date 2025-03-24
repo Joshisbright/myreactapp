@@ -120,7 +120,7 @@ export default function Contact() {
                                 <FormControl>
                                   <Input 
                                     placeholder="John Smith" 
-                                    className="input-neon py-6 font-lora" {/* Updated Input class */}
+                                    className="input-neon py-6 font-lora" /* Updated Input class */
                                     {...field} 
                                   />
                                 </FormControl>
@@ -140,7 +140,7 @@ export default function Contact() {
                                 <FormControl>
                                   <Input 
                                     placeholder="john@company.com" 
-                                    className="input-neon py-6 font-lora" {/* Updated Input class */}
+                                    className="input-neon py-6 font-lora" /* Updated Input class */
                                     {...field} 
                                   />
                                 </FormControl>
@@ -161,7 +161,7 @@ export default function Contact() {
                               <FormControl>
                                 <Input 
                                   placeholder="Your Company Ltd." 
-                                  className="input-neon py-6 font-lora" {/* Updated Input class */}
+                                  className="input-neon py-6 font-lora" /* Updated Input class */
                                   {...field} 
                                 />
                               </FormControl>
@@ -182,7 +182,7 @@ export default function Contact() {
                                 <Textarea 
                                   placeholder="Describe your procurement needs or challenges..." 
                                   rows={6}
-                                  className="input-neon resize-none font-lora" {/* Updated Textarea class */}
+                                  className="input-neon resize-none font-lora" /* Updated Textarea class */
                                   {...field} 
                                 />
                               </FormControl>
@@ -194,7 +194,7 @@ export default function Contact() {
                         <div className="pt-4">
                           <Button 
                             type="submit" 
-                            className="btn-neon w-full py-6 text-lg font-playfair tracking-wide" {/* Updated Button class */}
+                            className="btn-neon w-full py-6 text-lg font-playfair tracking-wide" /* Updated Button class */
                           >
                             <Send size={18} className="mr-2" /> Submit Inquiry
                           </Button>
