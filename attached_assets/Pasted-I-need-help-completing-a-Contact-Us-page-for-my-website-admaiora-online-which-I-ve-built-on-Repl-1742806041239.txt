@@ -1,0 +1,38 @@
+I need help completing a "Contact Us" page for my website, admaiora.online, which I’ve built on Replit using HTML, CSS, and JavaScript. Below is the content I want to include. Please help me:
+
+1. Create or update the `contact.html` file with this content, structured logically with a navigation bar, contact form, contact info, service promise, and footer.
+2. Update the CSS (in `styles.css`) to make all fonts on the Contact page black for vivid visibility, using the Poppins font (already included via Google Fonts) and #6B2D5C purple accents for buttons and navigation.
+3. Remove the FAQ section from the entire website (e.g., from navigation and footer links across all pages).
+4. Add JavaScript (in `scripts.js`) to ensure that whenever a page is clicked or redirected (e.g., to About Us, Services, or Contact), it refreshes and scrolls to the top.
+
+Here’s the content for the Contact Us page:
+
+---
+
+**CONNECT WITH US**  
+**Begin Your Journey to Excellence**  
+The pursuit of greater achievements starts with a conversation. Reach out to unlock procurement solutions tailored precisely to your needs.
+
+**Get in Touch**  
+Complete the form below and we'll respond within 24 hours with solutions crafted for your business needs.  
+- Full Name: John Smith (placeholder)  
+- Email Address: john@company.com (placeholder)  
+- Company Name: Your Company Ltd. (placeholder)  
+- Your Message: Describe your procurement needs or challenges... (placeholder)  
+- Submit Inquiry (button)
+
+**Contact Information**  
+- **Location:** New Delhi, India  
+- **Phone:** +91 123 456 7890  
+- **Email:** info@admaiora.in  
+- **LinkedIn:** Ad Maiora Profile (link placeholder)  
+- **Office Hours:**  
+  - Monday - Friday: 9:00 AM - 6:00 PM IST  
+  - Saturday: 10:00 AM - 2:00 PM IST  
+  - Sunday: Closed  
+
+**Our Service Promise**  
+Ad Maiora is dedicated to providing unparalleled procurement consulting services for Indian SMEs. We respond to all inquiries within 24 hours and deliver tailored solutions with the highest level of professionalism and confidentiality.
+
+**Footer Content:**  
+- **Ad Maiora:** Procurement consulting for Indian SMEs, helping businesses connect with reliable suppliers and streamline their procurement processes.
