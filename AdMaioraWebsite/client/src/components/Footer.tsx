@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Mail, Linkedin, Phone, MapPin, ChevronRight } from "lucide-react";
+import { Mail, Phone, MapPin, ChevronRight, Twitter } from "lucide-react"; // Changed import to Twitter
 
 export default function Footer() {
   const quickLinks = [
@@ -25,9 +25,17 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
             {/* Column 1: Company Info */}
             <div className="fade-in">
-              <div className="font-greatVibes text-4xl text-gold mb-5">
-                Ad Maiora
-              </div>
+              <a
+                href="https://x.com/AdMaioraGlobal"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                {/* Added link to the logo */}
+                <div className="font-greatVibes text-4xl text-gold mb-5">
+                  Ad Maiora
+                </div>
+              </a>
               <p className="text-white/80 mb-6 font-lora leading-relaxed">
                 Procurement consulting for Indian SMEs, helping businesses
                 connect with reliable suppliers and streamline their procurement
@@ -35,7 +43,7 @@ export default function Footer() {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="mailto:info@admaiora.in"
+                  href="mailto:pratikshrivastavaa@admaiora.online"
                   className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center
                     hover:bg-gold/20 transition-colors duration-300 group"
                   aria-label="Email us"
@@ -46,12 +54,14 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/AdMaioraGlobal" // Added Twitter link
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center
                     hover:bg-gold/20 transition-colors duration-300 group"
-                  aria-label="LinkedIn"
+                  aria-label="Twitter"
                 >
-                  <Linkedin
+                  <Twitter // Replaced Linkedin with Twitter
                     size={18}
                     className="text-gold group-hover:text-gold-light transition-colors duration-300"
                   />
@@ -110,16 +120,14 @@ export default function Footer() {
                   <div className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center mr-3 flex-shrink-0">
                     <MapPin size={16} className="text-gold" />
                   </div>
-                  <span className="text-white/80 font-lora">
-                    New Delhi, India
-                  </span>
+                  <span className="text-white/80 font-lora">Pune, India</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center mr-3 flex-shrink-0">
                     <Phone size={16} className="text-gold" />
                   </div>
                   <span className="text-white/80 font-lora">
-                    +91 123 456 7890
+                    +91 84214-3992
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -127,10 +135,10 @@ export default function Footer() {
                     <Mail size={16} className="text-gold" />
                   </div>
                   <a
-                    href="mailto:info@admaiora.in"
+                    href="mailto:pratikshrivastavaa@admaiora.online"
                     className="text-white/80 hover:text-gold transition-colors duration-300 font-lora"
                   >
-                    info@admaiora.in
+                    pratikshrivastavaa@admaiora.online
                   </a>
                 </li>
               </ul>

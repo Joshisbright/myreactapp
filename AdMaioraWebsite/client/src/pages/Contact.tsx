@@ -2,27 +2,29 @@ import { useState, useEffect } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { 
-  Form, 
-  FormControl, 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormMessage 
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 } from "../components/ui/form";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { Button } from "../components/ui/button";
 import { Alert, AlertDescription } from "../components/ui/alert";
 import { Card, CardContent } from "../components/ui/card";
-import { Mail, Linkedin, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Twitter } from "lucide-react";
 
 // Form validation schema using Zod
 const formSchema = z.object({
   name: z.string().min(1, { message: "Please enter your name" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
   company: z.string().min(1, { message: "Please enter your company name" }),
-  message: z.string().min(10, { message: "Please enter a detailed message (minimum 10 characters)" })
+  message: z.string().min(10, {
+    message: "Please enter a detailed message (minimum 10 characters)",
+  }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -38,14 +40,14 @@ export default function Contact() {
       name: "",
       email: "",
       company: "",
-      message: ""
-    }
+      message: "",
+    },
   });
 
   // Trigger animations when component mounts
   useEffect(() => {
     setFadeIn(true);
-  }, []);
+  });
 
   // Handle form submission
   const onSubmit = (data: FormValues) => {
@@ -72,17 +74,22 @@ export default function Contact() {
         </div>
 
         <div className="container mx-auto px-4 relative z-20 text-center">
-          <div className={`transition-all duration-1000 transform ${fadeIn ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <p className="inline-block px-4 py-1 bg-gold/10 text-gold border border-gold/20 rounded-full text-sm font-playfair tracking-wider mb-6">
+          <div
+            className={`transition-all duration-1000 transform ${fadeIn ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          >
+            <p className="inline-block px-4 py-1 bg-black text-white border border-gold/20 rounded-full text-sm font-playfair tracking-wider mb-6">
               CONNECT WITH US
             </p>
 
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Begin Your Journey to <span className="text-gold">Excellence</span>
+            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black">
+              Begin Your Journey to{" "}
+              <span className="text-black">Excellence</span>
             </h1>
 
-            <p className="text-xl text-white/80 font-lora max-w-2xl mx-auto mb-8">
-              The pursuit of greater achievements starts with a conversation. Reach out to unlock procurement solutions tailored precisely to your needs.
+            <p className="text-xl text-black/80 font-lora max-w-2xl mx-auto mb-8">
+              The pursuit of greater achievements starts with a conversation.
+              Reach out to unlock procurement solutions tailored precisely to
+              your needs.
             </p>
 
             <div className="w-20 h-1 bg-gold mx-auto"></div>
@@ -96,32 +103,40 @@ export default function Contact() {
           <div className="flex flex-col lg:flex-row max-w-6xl mx-auto gap-10">
             {/* Form Column */}
             <div className="lg:w-7/12">
-              <div className={`transition-all duration-1000 delay-300 transform ${fadeIn ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <div
+                className={`transition-all duration-1000 delay-300 transform ${fadeIn ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              >
                 <Card className="luxury-card border-gold/20 p-1 overflow-visible">
                   <CardContent className="p-8 md:p-12 bg-white">
                     <div className="mb-10">
-                      <h2 className="text-3xl font-playfair font-bold mb-4 text-navy">Get in Touch</h2>
-                      <p className="text-navy/70 font-lora">
-                        Complete the form below and we'll respond within 24 hours with solutions crafted for your business needs.
+                      <h2 className="text-3xl font-playfair font-bold mb-4 text-black">
+                        Get in Touch
+                      </h2>
+                      <p className="text-black/70 font-lora">
+                        Complete the form below and we'll respond before 24
+                        hours with solutions crafted for your business needs.
                       </p>
                     </div>
 
                     <Form {...form}>
-                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                      <form
+                        onSubmit={form.handleSubmit(onSubmit)}
+                        className="space-y-8"
+                      >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <FormField
                             control={form.control}
                             name="name"
                             render={({ field }) => (
                               <FormItem className="space-y-3">
-                                <FormLabel className="text-navy/80 font-medium font-playfair">
+                                <FormLabel className="text-black/80 font-medium font-playfair">
                                   Full Name
                                 </FormLabel>
                                 <FormControl>
-                                  <Input 
-                                    placeholder="John Smith" 
+                                  <Input
+                                    placeholder="John Smith"
                                     className="input-neon py-6 font-lora"
-                                    {...field} 
+                                    {...field}
                                   />
                                 </FormControl>
                                 <FormMessage className="text-red-500" />
@@ -134,14 +149,14 @@ export default function Contact() {
                             name="email"
                             render={({ field }) => (
                               <FormItem className="space-y-3">
-                                <FormLabel className="text-navy/80 font-medium font-playfair">
+                                <FormLabel className="text-black/80 font-medium font-playfair">
                                   Email Address
                                 </FormLabel>
                                 <FormControl>
-                                  <Input 
-                                    placeholder="john@company.com" 
+                                  <Input
+                                    placeholder="john@company.com"
                                     className="input-neon py-6 font-lora"
-                                    {...field} 
+                                    {...field}
                                   />
                                 </FormControl>
                                 <FormMessage className="text-red-500" />
@@ -155,14 +170,14 @@ export default function Contact() {
                           name="company"
                           render={({ field }) => (
                             <FormItem className="space-y-3">
-                              <FormLabel className="text-navy/80 font-medium font-playfair">
+                              <FormLabel className="text-black/80 font-medium font-playfair">
                                 Company Name
                               </FormLabel>
                               <FormControl>
-                                <Input 
-                                  placeholder="Your Company Ltd." 
+                                <Input
+                                  placeholder="Your Company Ltd."
                                   className="input-neon py-6 font-lora"
-                                  {...field} 
+                                  {...field}
                                 />
                               </FormControl>
                               <FormMessage className="text-red-500" />
@@ -175,15 +190,15 @@ export default function Contact() {
                           name="message"
                           render={({ field }) => (
                             <FormItem className="space-y-3">
-                              <FormLabel className="text-navy/80 font-medium font-playfair">
+                              <FormLabel className="text-black/80 font-medium font-playfair">
                                 Your Message
                               </FormLabel>
                               <FormControl>
-                                <Textarea 
-                                  placeholder="Describe your procurement needs or challenges..." 
+                                <Textarea
+                                  placeholder="Describe your procurement needs or challenges..."
                                   rows={6}
                                   className="input-neon resize-none font-lora"
-                                  {...field} 
+                                  {...field}
                                 />
                               </FormControl>
                               <FormMessage className="text-red-500" />
@@ -192,8 +207,8 @@ export default function Contact() {
                         />
 
                         <div className="pt-4">
-                          <Button 
-                            type="submit" 
+                          <Button
+                            type="submit"
                             className="btn-neon w-full py-6 text-lg font-playfair tracking-wide"
                           >
                             <Send size={18} className="mr-2" /> Submit Inquiry
@@ -204,10 +219,10 @@ export default function Contact() {
 
                     {formSuccess && (
                       <div className="mt-8 animate-fadeIn">
-                        <Alert className="bg-gold/10 border border-gold/30 text-navy rounded-none p-5">
+                        <Alert className="bg-gold/10 border border-gold/30 text-black rounded-none p-5">
                           <div className="flex items-center">
                             <CheckCircle className="h-5 w-5 text-gold mr-3" />
-                            <AlertDescription className="font-playfair font-medium text-base text-navy">
+                            <AlertDescription className="font-playfair font-medium text-base text-black">
                               Your Inquiry Has Been Received—Expect Excellence
                             </AlertDescription>
                           </div>
@@ -221,9 +236,13 @@ export default function Contact() {
 
             {/* Contact Info Column */}
             <div className="lg:w-5/12">
-              <div className={`h-full transition-all duration-1000 delay-500 transform ${fadeIn ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <div
+                className={`h-full transition-all duration-1000 delay-500 transform ${fadeIn ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              >
                 <div className="bg-navy text-white p-10 md:p-12 h-full border border-gold/30">
-                  <h3 className="text-3xl font-playfair font-bold mb-10 text-gold">Contact Information</h3>
+                  <h3 className="text-3xl font-playfair font-bold mb-10 text-black">
+                    Contact Information
+                  </h3>
 
                   <div className="space-y-8 mb-12">
                     <div className="flex items-start">
@@ -231,8 +250,10 @@ export default function Contact() {
                         <MapPin size={20} className="text-gold" />
                       </div>
                       <div>
-                        <h4 className="text-gold font-playfair font-medium mb-1">Location</h4>
-                        <p className="text-white/80 font-lora">New Delhi, India</p>
+                        <h4 className="text-black font-playfair font-medium mb-1">
+                          Location
+                        </h4>
+                        <p className="text-black/80 font-lora">Pune, India</p>
                       </div>
                     </div>
 
@@ -241,8 +262,12 @@ export default function Contact() {
                         <Phone size={20} className="text-gold" />
                       </div>
                       <div>
-                        <h4 className="text-gold font-playfair font-medium mb-1">Phone</h4>
-                        <p className="text-white/80 font-lora">+91 123 456 7890</p>
+                        <h4 className="text-black font-playfair font-medium mb-1">
+                          Phone
+                        </h4>
+                        <p className="text-black/80 font-lora">
+                          +91 84214-13992
+                        </p>
                       </div>
                     </div>
 
@@ -251,35 +276,43 @@ export default function Contact() {
                         <Mail size={20} className="text-gold" />
                       </div>
                       <div>
-                        <h4 className="text-gold font-playfair font-medium mb-1">Email</h4>
-                        <a 
-                          href="mailto:info@admaiora.in" 
-                          className="text-white/80 hover:text-gold transition-colors duration-300 font-lora"
+                        <h4 className="text-black font-playfair font-medium mb-1">
+                          Email
+                        </h4>
+                        <a
+                          href="mailto:pratikshrivastavaa@admaiora.global"
+                          className="text-black/80 hover:text-gold transition-colors duration-300 font-lora"
                         >
-                          info@admaiora.in
+                          pratikshrivastavaa@admaiora.online
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start">
                       <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mr-4 flex-shrink-0">
-                        <Linkedin size={20} className="text-gold" />
+                        <Twitter size={20} className="text-gold" />
                       </div>
                       <div>
-                        <h4 className="text-gold font-playfair font-medium mb-1">LinkedIn</h4>
-                        <a 
-                          href="#" 
-                          className="text-white/80 hover:text-gold transition-colors duration-300 font-lora"
+                        <h4 className="text-black font-playfair font-medium mb-1">
+                          Twitter
+                        </h4>
+                        <a
+                          href="https://x.com/AdMaioraGlobal"
+                          className="text-black/80 hover:text-gold transition-colors duration-300 font-lora"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          Ad Maiora Profile
+                          Follow us on Twitter
                         </a>
                       </div>
                     </div>
                   </div>
 
                   <div className="border-t border-gold/20 pt-8">
-                    <h4 className="text-xl font-playfair font-bold mb-4 text-gold">Office Hours</h4>
-                    <div className="space-y-2 font-lora text-white/80">
+                    <h4 className="text-xl font-playfair font-bold mb-4 text-black">
+                      Office Hours
+                    </h4>
+                    <div className="space-y-2 font-lora text-black/80">
                       <p>Monday - Friday: 9:00 AM - 6:00 PM IST</p>
                       <p>Saturday: 10:00 AM - 2:00 PM IST</p>
                       <p>Sunday: Closed</p>
@@ -292,11 +325,18 @@ export default function Contact() {
 
           {/* Service Promise */}
           <div className="mt-20 text-center max-w-3xl mx-auto">
-            <div className={`transition-all duration-1000 delay-700 transform ${fadeIn ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div
+              className={`transition-all duration-1000 delay-700 transform ${fadeIn ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            >
               <div className="w-20 h-1 bg-gold mx-auto mb-8"></div>
-              <h3 className="text-2xl font-playfair font-bold mb-4 text-navy">Our Service Promise</h3>
-              <p className="text-navy/70 font-lora leading-relaxed">
-                Ad Maiora is dedicated to providing unparalleled procurement consulting services for Indian SMEs. We respond to all inquiries within 24 hours and deliver tailored solutions with the highest level of professionalism and confidentiality.
+              <h3 className="text-2xl font-playfair font-bold mb-4 text-black">
+                Our Service Promise
+              </h3>
+              <p className="text-black/70 font-lora leading-relaxed">
+                Ad Maiora is dedicated to providing unparalleled procurement
+                consulting services for Indian SMEs. We respond to all inquiries
+                within 24 hours and deliver tailored solutions with the highest
+                level of professionalism and confidentiality.
               </p>
             </div>
           </div>
