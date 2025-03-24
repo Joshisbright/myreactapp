@@ -33,4 +33,10 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
+  server: {
+    allowedHosts: [
+      "0.0.0.0",
+      "34832a43-05c6-4cd4-b37c-43bd1c14d68d-00-3s23kdc8tv5zq.pike.replit.dev",
+    ],
+  },
 });
