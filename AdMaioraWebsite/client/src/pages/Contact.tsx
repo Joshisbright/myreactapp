@@ -30,7 +30,7 @@ type FormValues = z.infer<typeof formSchema>;
 export default function Contact() {
   const [formSuccess, setFormSuccess] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
-  
+
   // Initialize form with react-hook-form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -41,7 +41,7 @@ export default function Contact() {
       message: ""
     }
   });
-  
+
   // Trigger animations when component mounts
   useEffect(() => {
     setFadeIn(true);
@@ -52,44 +52,44 @@ export default function Contact() {
     console.log("Form submitted:", data);
     setFormSuccess(true);
     form.reset();
-    
+
     // Hide success message after 5 seconds
     setTimeout(() => {
       setFormSuccess(false);
     }, 5000);
   };
-  
+
   return (
     <>
       {/* Hero Banner */}
       <section className="bg-navy text-white py-24 relative">
         {/* Background gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-navy/90 to-navy/80 z-10"></div>
-        
+
         {/* Background image with parallax */}
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497215842964-222b430dc094?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center bg-no-repeat parallax z-0">
           {/* Placeholder for background */}
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-20 text-center">
           <div className={`transition-all duration-1000 transform ${fadeIn ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <p className="inline-block px-4 py-1 bg-gold/10 text-gold border border-gold/20 rounded-full text-sm font-playfair tracking-wider mb-6">
               CONNECT WITH US
             </p>
-            
+
             <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Begin Your Journey to <span className="text-gold">Excellence</span>
             </h1>
-            
+
             <p className="text-xl text-white/80 font-lora max-w-2xl mx-auto mb-8">
               The pursuit of greater achievements starts with a conversation. Reach out to unlock procurement solutions tailored precisely to your needs.
             </p>
-            
+
             <div className="w-20 h-1 bg-gold mx-auto"></div>
           </div>
         </div>
       </section>
-      
+
       {/* Contact Form Section */}
       <section className="py-section bg-white">
         <div className="container mx-auto px-4">
@@ -105,7 +105,7 @@ export default function Contact() {
                         Complete the form below and we'll respond within 24 hours with solutions crafted for your business needs.
                       </p>
                     </div>
-                    
+
                     <Form {...form}>
                       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -120,7 +120,7 @@ export default function Contact() {
                                 <FormControl>
                                   <Input 
                                     placeholder="John Smith" 
-                                    className="input-gold py-6 font-lora"
+                                    className="input-neon py-6 font-lora" {/* Updated Input class */}
                                     {...field} 
                                   />
                                 </FormControl>
@@ -128,7 +128,7 @@ export default function Contact() {
                               </FormItem>
                             )}
                           />
-                          
+
                           <FormField
                             control={form.control}
                             name="email"
@@ -140,7 +140,7 @@ export default function Contact() {
                                 <FormControl>
                                   <Input 
                                     placeholder="john@company.com" 
-                                    className="input-gold py-6 font-lora"
+                                    className="input-neon py-6 font-lora" {/* Updated Input class */}
                                     {...field} 
                                   />
                                 </FormControl>
@@ -149,7 +149,7 @@ export default function Contact() {
                             )}
                           />
                         </div>
-                        
+
                         <FormField
                           control={form.control}
                           name="company"
@@ -161,7 +161,7 @@ export default function Contact() {
                               <FormControl>
                                 <Input 
                                   placeholder="Your Company Ltd." 
-                                  className="input-gold py-6 font-lora"
+                                  className="input-neon py-6 font-lora" {/* Updated Input class */}
                                   {...field} 
                                 />
                               </FormControl>
@@ -169,7 +169,7 @@ export default function Contact() {
                             </FormItem>
                           )}
                         />
-                        
+
                         <FormField
                           control={form.control}
                           name="message"
@@ -182,7 +182,7 @@ export default function Contact() {
                                 <Textarea 
                                   placeholder="Describe your procurement needs or challenges..." 
                                   rows={6}
-                                  className="input-gold resize-none font-lora"
+                                  className="input-neon resize-none font-lora" {/* Updated Textarea class */}
                                   {...field} 
                                 />
                               </FormControl>
@@ -190,18 +190,18 @@ export default function Contact() {
                             </FormItem>
                           )}
                         />
-                        
+
                         <div className="pt-4">
                           <Button 
                             type="submit" 
-                            className="btn-gold w-full py-6 text-lg font-playfair tracking-wide"
+                            className="btn-neon w-full py-6 text-lg font-playfair tracking-wide" {/* Updated Button class */}
                           >
                             <Send size={18} className="mr-2" /> Submit Inquiry
                           </Button>
                         </div>
                       </form>
                     </Form>
-                    
+
                     {formSuccess && (
                       <div className="mt-8 animate-fadeIn">
                         <Alert className="bg-gold/10 border border-gold/30 text-navy rounded-none p-5">
@@ -218,13 +218,13 @@ export default function Contact() {
                 </Card>
               </div>
             </div>
-            
+
             {/* Contact Info Column */}
             <div className="lg:w-5/12">
               <div className={`h-full transition-all duration-1000 delay-500 transform ${fadeIn ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 <div className="bg-navy text-white p-10 md:p-12 h-full border border-gold/30">
                   <h3 className="text-3xl font-playfair font-bold mb-10 text-gold">Contact Information</h3>
-                  
+
                   <div className="space-y-8 mb-12">
                     <div className="flex items-start">
                       <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mr-4 flex-shrink-0">
@@ -235,7 +235,7 @@ export default function Contact() {
                         <p className="text-white/80 font-lora">New Delhi, India</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mr-4 flex-shrink-0">
                         <Phone size={20} className="text-gold" />
@@ -245,7 +245,7 @@ export default function Contact() {
                         <p className="text-white/80 font-lora">+91 123 456 7890</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mr-4 flex-shrink-0">
                         <Mail size={20} className="text-gold" />
@@ -260,7 +260,7 @@ export default function Contact() {
                         </a>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mr-4 flex-shrink-0">
                         <Linkedin size={20} className="text-gold" />
@@ -276,7 +276,7 @@ export default function Contact() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="border-t border-gold/20 pt-8">
                     <h4 className="text-xl font-playfair font-bold mb-4 text-gold">Office Hours</h4>
                     <div className="space-y-2 font-lora text-white/80">
@@ -289,7 +289,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          
+
           {/* Service Promise */}
           <div className="mt-20 text-center max-w-3xl mx-auto">
             <div className={`transition-all duration-1000 delay-700 transform ${fadeIn ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
