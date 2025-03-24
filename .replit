@@ -5,3 +5,8 @@ build = ["sh", "-c", "npm run build"]
 [[deployment.rewrites]]
 from = "/*"
 to = "/index.html"
+
+[[deployment.responseHeaders]]
+path = "/*"
+name = "Cache-Control"
+value = "no-store"
