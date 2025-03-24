@@ -1,7 +1,7 @@
 modules = ["nodejs-20"]
 [deployment]
-run = ["sh", "-c", "node dist/index.js"]
-build = ["sh", "-c", "npm run build"]
+run = ["sh", "-c", "serve -s AdMaioraWebsite/dist/public"]
+build = ["sh", "-c", "cd AdMaioraWebsite && npm run build"]
 
 [[deployment.rewrites]]
 from = "/*"
@@ -13,7 +13,7 @@ name = "Cache-Control"
 value = "no-store"
 
 [workflows]
-runButton = "Run Dev Server"
+runButton = "Run Static Dev"
 
 [[workflows.workflow]]
 name = "Run Dev Server"
@@ -23,3 +23,16 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "cd AdMaioraWebsite && npm run dev"
+
+[[workflows.workflow]]
+name = "Run Static Dev"
+author = 40780561
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd AdMaioraWebsite && npm run dev -- --host 0.0.0.0"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
