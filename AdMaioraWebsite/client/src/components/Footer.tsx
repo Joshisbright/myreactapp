@@ -138,7 +138,7 @@ export default function Footer() {
                     href="mailto:happytohelp@admaiora.online"
                     className="text-white/80 hover:text-gold transition-colors duration-300 font-lora"
                   >
-                    pratikshrivastavaa@admaiora.online
+                    happytohelp@admaiora.online
                   </a>
                 </li>
               </ul>
