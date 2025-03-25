@@ -135,7 +135,7 @@ export default function Footer() {
                     <Mail size={16} className="text-gold" />
                   </div>
                   <a
-                    href="mailto:pratikshrivastavaa@admaiora.online"
+                    href="mailto:happytohelp@admaiora.online"
                     className="text-white/80 hover:text-gold transition-colors duration-300 font-lora"
                   >
                     pratikshrivastavaa@admaiora.online
