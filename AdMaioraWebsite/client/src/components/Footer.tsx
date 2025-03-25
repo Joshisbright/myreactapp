@@ -43,7 +43,7 @@ export default function Footer() {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="mailto:pratikshrivastavaa@admaiora.online"
+                  href="mailto:happytohelp@admaiora.online"
                   className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center
                     hover:bg-gold/20 transition-colors duration-300 group"
                   aria-label="Email us"
