@@ -277,7 +277,7 @@ export default function Contact() {
                                                     href="mailto:pratikshrivastavaa@admaiora.global"
                                                     className="text-black/80 hover:text-gold transition-colors duration-300 font-lora"
                                                 >
-                                                    pratikshrivastavaa@admaiora.online
+                                                    happytohelp@admaiora.online
                                                 </a>
                                             </div>
                                         </div>
