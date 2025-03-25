@@ -105,7 +105,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
-                <a href="https://calendly.com/admaioraglobal/30min">
+                <a href="https://calendly.com/admaioraonline/30min">
                   <button className="btn-neon text-lg font-medium shadow-neon">
                     No Fees / Low Fees Plans
                   </button>
