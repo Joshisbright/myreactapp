@@ -274,7 +274,7 @@ export default function Contact() {
                                                     Email
                                                 </h4>
                                                 <a
-                                                    href="mailto:pratikshrivastavaa@admaiora.global"
+                                                    href="mailto:happytohelp@admaiora.global"
                                                     className="text-black/80 hover:text-gold transition-colors duration-300 font-lora"
                                                 >
                                                     happytohelp@admaiora.online
