@@ -20,13 +20,13 @@ export default function Services() {
     },
     {
       number: 4,
-      title: "Report Delivery",
-      description: "Get a detailed, actionable report with supplier options and recommendations."
+      title: "Comprehensive Report",
+      description: "Get a detailed, actionable report with supplier options, pricing and personalized recommendations."
     },
     {
       number: 5,
       title: "Client Negotiation",
-      description: "You choose the supplier that fits your needs best from our curated options."
+      description: "You choose and directly negotiate with the supplier that fits your needs best from our curated options."
     },
     {
       number: 6,
