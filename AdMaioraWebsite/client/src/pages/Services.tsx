@@ -16,7 +16,7 @@ export default function Services() {
     {
       number: 3,
       title: "Supplier Research",
-      description: "We find the best vendors for you based on your specific requirements and industry."
+      description: "We identify and shortlist 3 + 1 top suppliers in weeks, not months."
     },
     {
       number: 4,
