@@ -178,7 +178,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Service Card 1 */}
             <div
-              className={`transform transition-all duration-1000 ${isInView ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
+              className={`transform transition-all duration-1000 ${
+                isInView ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+              }`}
               style={{ transitionDelay: "0.1s" }}
             >
               <div className="group">
@@ -203,7 +205,7 @@ export default function Home() {
                     </p>
                     <Link href="/services">
                       <span className="neon-underline text-white font-medium font-poppins group-hover:text-[#9D4EDD] inline-flex items-center transition-colors duration-300 cursor-pointer">
-                        Discover More 
+                        Discover More&nbsp;
                         <ArrowUpRight
                           size={18}
                           className="ml-1 transition-transform duration-300 group-hover:translate-x-1"
@@ -217,7 +219,9 @@ export default function Home() {
 
             {/* Service Card 2 */}
             <div
-              className={`transform transition-all duration-1000 ${isInView ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
+              className={`transform transition-all duration-1000 ${
+                isInView ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+              }`}
               style={{ transitionDelay: "0.3s" }}
             >
               <div className="group">
@@ -242,7 +246,7 @@ export default function Home() {
                     </p>
                     <Link href="/services">
                       <span className="neon-underline text-white font-medium font-poppins group-hover:text-[#9D4EDD] inline-flex items-center transition-colors duration-300 cursor-pointer">
-                        Explore Reports 
+                        Explore Reports&nbsp;
                         <ArrowUpRight
                           size={18}
                           className="ml-1 transition-transform duration-300 group-hover:translate-x-1"
@@ -256,7 +260,9 @@ export default function Home() {
 
             {/* Service Card 3 */}
             <div
-              className={`transform transition-all duration-1000 ${isInView ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
+              className={`transform transition-all duration-1000 ${
+                isInView ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+              }`}
               style={{ transitionDelay: "0.5s" }}
             >
               <div className="group">
@@ -281,7 +287,7 @@ export default function Home() {
                     </p>
                     <Link href="/services">
                       <span className="neon-underline text-white font-medium font-poppins group-hover:text-[#9D4EDD] inline-flex items-center transition-colors duration-300 cursor-pointer">
-                        Discover Process 
+                        Discover Process&nbsp;
                         <ArrowUpRight
                           size={18}
                           className="ml-1 transition-transform duration-300 group-hover:translate-x-1"
@@ -308,119 +314,3 @@ export default function Home() {
             <div className="feature-icon mx-auto mb-8">
               <Star className="w-10 h-10 text-[#9D4EDD]" />
             </div>
-            <h2 className="text-4xl font-poppins font-bold mb-6 text-white">
-              A Guiding Star for Excellence
-            </h2>
-            <p className="text-xl leading-relaxed font-inter text-white/80 mb-10">
-              Our exclusive feedback-driven rating system highlights elite
-              suppliers, ensuring you choose with absolute confidence. Authentic
-              ratings from fellow premium SMEs illuminate your path to
-              procurement excellence.
-            </p>
-            <Link href="/services">
-              <button className="btn-neon px-8 py-3 text-base font-medium shadow-neon">
-                Discover Our Selection Process
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-section bg-[#121212] relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid opacity-50 z-0"></div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <p className="text-[#9D4EDD] font-medium font-poppins tracking-wider mb-3">
-              TESTIMONIALS
-            </p>
-            <h2 className="text-4xl font-poppins font-bold mb-6 text-white">
-              What Our Elite Clients Say
-            </h2>
-            <div className="divider-neon-center"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Testimonial 1 */}
-            <div className="dark-card group hover:shadow-neon transition-all duration-500">
-              <div className="flex items-center mb-6">
-                <div className="text-[#9D4EDD] opacity-40">
-                  <Quote size={40} />
-                </div>
-              </div>
-              <p className="text-white/80 mb-8 font-inter text-lg leading-relaxed">
-                "Ad Maiora delivered exceptional results, driving 10X sales
-                growth for our Amazon Biz. Their brand onboarding expertise and
-                seamless coordination make them an invaluable strategic
-                partner."
-              </p>
-              <div className="flex items-center">
-                <div className="rounded-full border border-[#9D4EDD]/20 w-14 h-14 flex items-center justify-center mr-5 overflow-hidden group-hover:border-[#9D4EDD]/50 transition-colors duration-300">
-                  <div className="bg-[#9D4EDD]/5 w-full h-full flex items-center justify-center">
-                    <span className="text-white font-poppins font-bold text-lg">
-                      PS
-                    </span>
-                  </div>
-                </div>
-                <div>
-                  <p className="font-bold font-poppins text-white text-lg">
-                    Priya Sharma
-                  </p>
-                  <p className="text-sm text-white/60 font-inter">
-                    Key Account Manager
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="dark-card group hover:shadow-neon transition-all duration-500">
-              <div className="flex items-center mb-6">
-                <div className="text-[#9D4EDD] opacity-40">
-                  <Quote size={40} />
-                </div>
-              </div>
-              <p className="text-white/80 mb-8 font-inter text-lg leading-relaxed">
-                "Ad Maiora transformed our tech course enrollment process at
-                Acadeemia. Their tailored procurement strategies inspired
-                students and faculty alike. They're truly the gold standard in
-                the industry."
-              </p>
-              <div className="flex items-center">
-                <div className="rounded-full border border-[#9D4EDD]/20 w-14 h-14 flex items-center justify-center mr-5 overflow-hidden group-hover:border-[#9D4EDD]/50 transition-colors duration-300">
-                  <div className="bg-[#9D4EDD]/5 w-full h-full flex items-center justify-center">
-                    <span className="text-white font-poppins font-bold text-lg">
-                      AR
-                    </span>
-                  </div>
-                </div>
-                <div>
-                  <p className="font-bold font-poppins text-white text-lg">
-                    Anjali Rao
-                  </p>
-                  <p className="text-sm text-white/60 font-inter">
-                    Program Director, Acadeemia
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="mt-20 text-center">
-            <Link href="/success-stories">
-              <div className="inline-flex items-center text-white hover:text-[#9D4EDD] transition-colors duration-300 font-poppins font-medium text-lg group">
-                View All Success Stories 
-                <ArrowUpRight
-                  size={20}
-                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-[-4px]"
-                />
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
